@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "url": "https://images.unsplash.com/photo-1587582423116-ec07293f0395?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Construction worker in hard hat on building frame"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Contractor in vest and helmet holding power tool"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Team of construction workers standing on site"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Two construction workers in safety vests at job site"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1652303518379-c0ef1c9fb2b1?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Contractors standing in front of a construction vehicle"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1563166423-482a8c14b2d6?fm=jpg&q=60&w=3000&auto=format&fit=crop",
+      "alt": "Contractor kneeling on unfinished building during daytime"
+    }
+  ],
+  "source": "ai_search"
+}
