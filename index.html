@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOMEstretch: NW Indiana | Home Remodeling & Renovation Contractor</title>
+<meta name="description" content="HOMEstretch: NW Indiana is a full-service remodeling contractor serving Northwest Indiana homeowners with kitchen, bathroom, room addition, and exterior renovation services. 5.0-star rated. Request your free consultation today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --clay: #b5502e;
+    --clay-dark: #8f3e22;
+    --cream: #fbf4ea;
+    --cream-2: #f2e6d5;
+    --charcoal: #2b2622;
+    --sage: #5c6b52;
+    --line: #e2d3ba;
+    --radius: 14px;
+    --max: 1140px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Inter', system-ui, sans-serif;
+    color:var(--charcoal);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    margin:0 0 0.5em;
+    line-height:1.15;
+    color:var(--charcoal);
+  }
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{
+    width:100%;
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 1.25rem;
+  }
+  a.skip-link{
+    position:absolute;left:-999px;top:0;
+    background:var(--clay);color:#fff;padding:.5em 1em;z-index:100;
+  }
+  a.skip-link:focus{left:0;}
+
+  /* Header */
+  header.site{
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:50;
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0.9rem 1.25rem;
+    max-width:var(--max);
+    margin:0 auto;
+  }
+  .brand{
+    display:flex;align-items:center;gap:0.6rem;
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.15rem;
+    color:var(--clay-dark);
+    text-decoration:none;
+  }
+  .brand svg{width:34px;height:34px;flex-shrink:0;}
+  nav.links{display:none;gap:1.75rem;font-weight:600;font-size:0.95rem;}
+  nav.links a{text-decoration:none;color:var(--charcoal);}
+  nav.links a:hover{color:var(--clay-dark);}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:0.4rem;
+    background:var(--clay);
+    color:#fff;
+    padding:0.55rem 1.1rem;
+    border-radius:999px;
+    font-weight:600;
+    font-size:0.9rem;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--clay-dark);}
+
+  @media(min-width:800px){
+    nav.links{display:flex;}
+  }
+
+  /* Hero */
+  .hero{
+    padding:3.5rem 0 3rem;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(181,80,46,0.12), transparent 55%),
+      var(--cream);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;
+    gap:2rem;
+    align-items:center;
+  }
+  @media(min-width:900px){
+    .hero-grid{grid-template-columns:1.1fr 0.9fr;}
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    background:var(--cream-2);
+    border:1px solid var(--line);
+    color:var(--clay-dark);
+    font-weight:600;
+    font-size:0.85rem;
+    padding:0.4rem 0.85rem;
+    border-radius:999px;
+    margin-bottom:1.1rem;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem, 5vw, 3.2rem);
+    max-width:18ch;
+  }
+  .hero .lede{
+    font-size:1.15rem;
+    max-width:42ch;
+    color:#4a433c;
+  }
+  .hero-ctas{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.9rem;
+    margin-top:1.6rem;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    padding:0.85rem 1.5rem;
+    border-radius:999px;
+    font-weight:700;
+    text-decoration:none;
+    font-size:1rem;
+    border:2px solid transparent;
+    transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--clay);color:#fff;}
+  .btn-primary:hover{background:var(--clay-dark);}
+  .btn-ghost{background:transparent;border-color:var(--charcoal);color:var(--charcoal);}
+  .btn-ghost:hover{background:var(--charcoal);color:#fff;}
+
+  .hero-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:1.75rem;
+    box-shadow:0 12px 30px -12px rgba(43,38,34,0.18);
+  }
+  .rating-row{
+    display:flex;
+    align-items:center;
+    gap:0.75rem;
+    margin-bottom:0.9rem;
+  }
+  .stars{color:var(--clay);display:flex;gap:2px;}
+  .rating-num{font-family:'Fraunces',serif;font-weight:700;font-size:1.9rem;}
+  .rating-sub{font-size:0.9rem;color:#6a625a;}
+  .hero-card ul{list-style:none;margin:0;padding:0;display:grid;gap:0.6rem;}
+  .hero-card li{display:flex;gap:0.6rem;align-items:flex-start;font-size:0.95rem;}
+  .hero-card li svg{flex-shrink:0;color:var(--sage);width:20px;height:20px;margin-top:2px;}
+
+  /* Sections general */
+  section{padding:4rem 0;}
+  .section-head{max-width:56ch;margin-bottom:2.5rem;}
+  .section-head .tag{
+    color:var(--clay-dark);
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    font-size:0.8rem;
+    margin-bottom:0.5rem;
+    display:block;
+  }
+  .section-head h2{font-size:clamp(1.7rem,3.5vw,2.4rem);}
+
+  /* Services */
+  .services{background:var(--cream-2);}
+  .service-grid{
+    display:grid;
+    gap:1.4rem;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:640px){
+    .service-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media(min-width:1000px){
+    .service-grid{grid-template-columns:repeat(3,1fr);}
+  }
+  .service-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:1.6rem;
+  }
+  .service-card .icon{
+    width:48px;height:48px;
+    background:var(--clay);
+    border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:1rem;
+    color:#fff;
+  }
+  .service-card h3{font-size:1.15rem;margin-bottom:0.4rem;}
+  .service-card p{font-size:0.95rem;color:#5a534b;margin-bottom:0;}
+
+  /* About */
+  .about-grid{
+    display:grid;gap:2.2rem;
+    align-items:center;
+  }
+  @media(min-width:900px){
+    .about-grid{grid-template-columns:0.95fr 1.05fr;}
+  }
+  .about-visual{
+    background:linear-gradient(135deg, var(--clay) 0%, var(--sage) 100%);
+    border-radius:var(--radius);
+    min-height:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:2rem;
+  }
+  .about-visual svg{width:100%;height:auto;max-width:280px;}
+  .badge-list{display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:1.4rem;}
+  .badge{
+    background:var(--cream-2);
+    border:1px solid var(--line);
+    padding:0.5rem 0.9rem;
+    border-radius:999px;
+    font-size:0.85rem;
+    font-weight:600;
+    color:var(--clay-dark);
+  }
+
+  /* Social proof */
+  .proof{
+    background:var(--charcoal);
+    color:var(--cream);
+  }
+  .proof .section-head h2{color:var(--cream);}
+  .proof .section-head .tag{color:#e0a980;}
+  .proof-stat{
+    display:flex;
+    flex-wrap:wrap;
+    gap:2.5rem;
+    align-items:center;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:var(--radius);
+    padding:2rem;
+  }
+  .proof-stars{color:#e0a980;display:flex;gap:4px;}
+  .proof-num{font-family:'Fraunces',serif;font-size:3rem;font-weight:700;}
+  .proof-text{max-width:46ch;color:#d9d2c8;}
+
+  /* Contact */
+  .contact{background:var(--cream-2);}
+  .contact-grid{
+    display:grid;
+    gap:2rem;
+  }
+  @media(min-width:900px){
+    .contact-grid{grid-template-columns:1fr 1fr;}
+  }
+  .contact-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:2rem;
+  }
+  .contact-card h3{font-size:1.3rem;margin-bottom:0.8rem;}
+  .contact-detail{
+    display:flex;
+    gap:0.8rem;
+    align-items:flex-start;
+    margin-bottom:1.1rem;
+  }
+  .contact-detail svg{color:var(--clay);flex-shrink:0;width:22px;height:22px;margin-top:2px;}
+  .contact-detail a{
+    font-weight:700;
+    text-decoration:none;
+    color:var(--charcoal);
+    font-size:1.05rem;
+  }
+  .contact-detail a:hover{color:var(--clay-dark);}
+  form{display:grid;gap:1rem;}
+  label{font-weight:600;font-size:0.9rem;display:block;margin-bottom:0.3rem;}
+  input, textarea, select{
+    width:100%;
+    padding:0.75rem 0.9rem;
+    border:1px solid var(--line);
+    border-radius:8px;
+    font-family:inherit;
+    font-size:1rem;
+    background:#fdfaf5;
+  }
+  input:focus, textarea:focus, select:focus{
+    outline:2px solid var(--clay);
+    outline-offset:1px;
+  }
+  .form-row{display:grid;gap:1rem;}
+  @media(min-width:600px){
+    .form-row.two{grid-template-columns:1fr 1fr;}
+  }
+
+  /* Footer */
+  footer.site{
+    background:var(--charcoal);
+    color:#cfc7bd;
+    padding:2.5rem 0 1.5rem;
+    font-size:0.9rem;
+  }
+  .footer-grid{
+    display:grid;
+    gap:1.5rem;
+    margin-bottom:1.5rem;
+  }
+  @media(min-width:700px){
+    .footer-grid{grid-template-columns:2fr 1fr 1fr;}
+  }
+  footer.site h4{
+    color:#fff;font-family:'Fraunces',serif;margin-bottom:0.6rem;font-size:1rem;
+  }
+  footer.site a{color:#cfc7bd;text-decoration:none;}
+  footer.site a:hover{color:#fff;}
+  footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:0.5rem;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.12);
+    padding-top:1.2rem;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:0.5rem;
+    font-size:0.82rem;
+    color:#a89f94;
+  }
+  .visually-hidden{
+    position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 24L24 8L42 24" stroke="#b5502e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 21V40H37V21" stroke="#5c6b52" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="20" y="28" width="8" height="12" fill="#b5502e"/>
+      </svg>
+      HOMEstretch <span style="color:var(--sage);">NW Indiana</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">
+      Free Estimate
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L2 9L4 21H20L22 9L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          Serving Northwest Indiana Homeowners
+        </span>
+        <h1>Renovate your home, one honest step at a time.</h1>
+        <p class="lede">HOMEstretch: NW Indiana is a full-service remodeling contractor helping local homeowners renovate, expand, and update their homes with franchise-backed quality standards and one point of contact from start to finish.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact">
+            Request a Free Consultation
+          </a>
+          <a class="btn btn-ghost" href="#services">See Our Services</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="rating-row">
+          <div class="stars" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <div class="rating-num">5.0</div>
+          </div>
+          <div class="rating-sub">from 30 local reviews</div>
+        </div>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Full-service remodeling under one contractor
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Backed by an established national franchise
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Kitchens, baths, additions & exteriors
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">What We Do</span>
+        <h2>Renovation services for every part of the house</h2>
+        <p>From a single remodeled room to a full home refresh, our team handles the planning, permitting, and building — so you deal with one contractor, not five.</p>
+      </div>
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 2L21 9V20H3V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Home Remodeling</h3>
+          <p>Whole-home renovation planning and execution, tailored to how your family actually lives.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21V9L14 3L20 9V21" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 21V13H8V21" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Room Additions</h3>
+          <p>Need more space? We design and build additions that blend seamlessly with your existing home.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9H21" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Kitchen & Bathroom Renovations</h3>
+          <p>Functional, beautiful updates to the two rooms that matter most for daily comfort and resale value.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>General Contracting</h3>
+          <p>Licensed oversight of your project from permits to punch list, with clear communication throughout.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12H21" stroke="currentColor" stroke-width="2"/><path d="M3 6H21" stroke="currentColor" stroke-width="2"/><path d="M3 18H21" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Exterior Improvements</h3>
+          <p>Siding, roofing, and other exterior upgrades that protect your home and boost curb appeal.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Free Consultations</h3>
+          <p>Every project starts with an in-home visit to talk through goals, budget, and timeline — no pressure.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-visual" aria-hidden="true">
+        <svg viewBox="0 0 200 160" fill="none">
+          <path d="M20 90L100 20L180 90" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="45" y="90" width="110" height="60" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="4"/>
+          <rect x="90" y="105" width="20" height="45" fill="#fff"/>
+          <rect x="60" y="100" width="18" height="18" stroke="#fff" stroke-width="3" fill="none"/>
+        </svg>
+      </div>
+      <div>
+        <span class="eyebrow">About Us</span>
+        <h2>Local craftsmanship, backed by a national standard.</h2>
+        <p>HOMEstretch: NW Indiana brings full-service residential remodeling to homeowners across the region — combining hands-on, local project management with the quality systems and accountability of an established home improvement franchise network.</p>
+        <p>We focus on doing renovation the way it should be done: one contractor managing your entire project, clear timelines, and a finished result that fits how you actually want to live in your home.</p>
+        <div class="badge-list">
+          <span class="badge">Franchise-Backed Standards</span>
+          <span class="badge">Full-Service Remodeling</span>
+          <span class="badge">Residential Specialists</span>
+          <span class="badge">Northwest Indiana Based</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="proof" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Trusted Locally</span>
+        <h2>A perfect rating from homeowners like you</h2>
+      </div>
+      <div class="proof-stat">
+        <div>
+          <div class="proof-stars" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="proof-num">5.0</div>
+        </div>
+        <p class="proof-text">HOMEstretch: NW Indiana holds a 5.0-star average across 30 customer reviews — reflecting consistent quality, communication, and follow-through on residential remodeling projects throughout the region.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">Get In Touch</span>
+        <h2>Request your free renovation consultation</h2>
+        <p>Tell us a bit about your project and we'll follow up to schedule an in-home visit and estimate.</p>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <h3>Contact Details</h3>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92V19a2 2 0 01-2.18 2A19.79 19.79 0 013 5.18 2 2 0 015 3h2.09a2 2 0 012 1.72c.12.9.33 1.79.63 2.63a2 2 0 01-.45 2.11L8.09 10.63a16 16 0 006.28 6.28l1.17-1.17a2 2 0 012.11-.45c.84.3 1.73.51 2.63.63A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <div style="font-size:0.85rem;color:#6a625a;margin-bottom:0.2rem;">Call us</div>
+              <a href="tel:+12193508644">(219) 350-8644</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            <div>
+              <div style="font-size:0.85rem;color:#6a625a;margin-bottom:0.2rem;">Service Area</div>
+              <p style="margin:0;font-weight:700;">Proudly serving homeowners throughout Northwest Indiana</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 8H21" stroke="currentColor" stroke-width="2"/></svg>
+            <div>
+              <div style="font-size:0.85rem;color:#6a625a;margin-bottom:0.2rem;">Hours</div>
+              <p style="margin:0;font-weight:700;">Call for current availability & scheduling</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3>Request an Estimate</h3>
+          <form action="tel:+12193508644" method="get">
+            <div class="form-row two">
+              <div>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" required>
+              </div>
+              <div>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" required>
+              </div>
+            </div>
+            <div class="form-row two">
+              <div>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+              <div>
+                <label for="service">Project Type</label>
+                <select id="service" name="service">
+                  <option>Kitchen Renovation</option>
+                  <option>Bathroom Renovation</option>
+                  <option>Room Addition</option>
+                  <option>Exterior Improvement</option>
+                  <option>Whole Home Remodel</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="details">Tell us about your project</label>
+              <textarea id="details" name="details" rows="4"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit" style="justify-self:start;">
+              Send Request
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>HOMEstretch: NW Indiana</h4>
+        <p style="max-width:36ch;color:#b6ac9f;">Full-service home remodeling contractor serving homeowners throughout Northwest Indiana with franchise-backed quality and one point of contact for your entire project.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+12193508644">(219) 350-8644</a></li>
+          <li>Northwest Indiana</li>
+          <li><a href="https://www.home-stretch.com/locations/in/nwindiana" target="_blank" rel="noopener">home-stretch.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 HOMEstretch: NW Indiana. All rights reserved.</span>
+      <span>Website sample by Wild Card Creative Co</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
