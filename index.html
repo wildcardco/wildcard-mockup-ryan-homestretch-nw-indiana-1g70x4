@@ -219,6 +219,25 @@
   .service-card h3{font-size:1.15rem;margin-bottom:0.4rem;}
   .service-card p{font-size:0.95rem;color:#5a534b;margin-bottom:0;}
 
+  /* Gallery */
+  .photo-gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1rem;
+    margin-top:2.5rem;
+  }
+  @media(min-width:700px){
+    .photo-gallery{grid-template-columns:repeat(4,1fr);}
+  }
+  .photo-gallery figure{margin:0;}
+  .photo-gallery img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:var(--radius);
+    border:1px solid var(--line);
+  }
+
   /* About */
   .about-grid{
     display:grid;gap:2.2rem;
@@ -235,6 +254,9 @@
     align-items:center;
     justify-content:center;
     padding:2rem;
+    background-size:cover;
+    background-position:center;
+    background-blend-mode:multiply;
   }
   .about-visual svg{width:100%;height:auto;max-width:280px;}
   .badge-list{display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:1.4rem;}
@@ -401,6 +423,7 @@
       </div>
 
       <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="Newly remodeled home interior" style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:1.25rem;">
         <div class="rating-row">
           <div class="stars" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -491,13 +514,28 @@
         </div>
 
       </div>
+
+      <div class="photo-gallery">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="Renovated kitchen with modern finishes">
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1652303518379-c0ef1c9fb2b1?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="Updated bathroom renovation">
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1563166423-482a8c14b2d6?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="Home exterior improvement project">
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="Room addition construction in progress">
+        </figure>
+      </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
     <div class="wrap about-grid">
-      <div class="about-visual" aria-hidden="true">
+      <div class="about-visual" aria-hidden="true" style="background-image:url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?fm=jpg&q=60&w=3000&auto=format&fit=crop');">
         <svg viewBox="0 0 200 160" fill="none">
           <path d="M20 90L100 20L180 90" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
           <rect x="45" y="90" width="110" height="60" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="4"/>
